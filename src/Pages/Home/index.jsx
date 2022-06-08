@@ -24,5 +24,6 @@ export const Home = () => {
         </Content>
       </Conteiner>
     </>
+
   );
 };
