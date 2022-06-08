@@ -1,14 +1,22 @@
+import { Card } from "../Card";
+import { Conteiner, Content } from "./style";
+
 export const Showcase = ({ productsList }) => {
   return (
-    <>
-      {productsList?.map(({ id, img, name, category, price }) => (
-        <div key={id}>
-          <img src={img} alt="name" />
-          <h2>{name}</h2>
-          <p>{category}</p>
-          <span>{price}</span>
-        </div>
-      ))}
-    </>
+    <Conteiner>
+      <Content>
+        <ul>
+          {productsList?.map(({ id, img, name, category, price }) => (
+            <Card
+              key={id}
+              img={img}
+              name={name}
+              category={category}
+              price={price}
+            />
+          ))}
+        </ul>
+      </Content>
+    </Conteiner>
   );
 };
