@@ -1,6 +1,6 @@
 import { apiFood } from "../../Services/api";
 
-import { Content } from "./style";
+import { Conteiner, Content } from "./style";
 
 import { Header } from "../../components/Header";
 import { Showcase } from "../../components/Showcase";
@@ -15,10 +15,14 @@ export const Home = () => {
   }, []);
 
   return (
-    <Content>
-      <Header />
+    <>
+      <Conteiner>
+        <Header />
 
-      <Showcase productsList={productsList} />
-    </Content>
+        <Content>
+          <Showcase productsList={productsList} />
+        </Content>
+      </Conteiner>
+    </>
   );
 };
