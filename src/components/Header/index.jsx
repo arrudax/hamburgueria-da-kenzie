@@ -1,3 +1,5 @@
+import logo from "../../assets/logo/logo.svg";
+import { ThemeButton } from "../../components/Button";
 import { Conteiner, Content } from "./styles";
 
 export const Header = () => {
@@ -5,7 +7,13 @@ export const Header = () => {
     <>
       <Conteiner>
         <Content>
-          <h1>Title</h1>
+          <img src={logo} alt="logo do restaurante" />
+
+          <div className="conteiner__search">
+            <input type="text" placeholder="Digitar Pesquisa" />
+
+            <ThemeButton>Pesquisar</ThemeButton>
+          </div>
         </Content>
       </Conteiner>
     </>
