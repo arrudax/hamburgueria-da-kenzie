@@ -13,4 +13,9 @@ export const Conteiner = styled.button`
   height: 40px;
 
   color: white;
+
+  &:hover {
+  background-color: var(--Color-primary-50);
+
+  }
 `;
