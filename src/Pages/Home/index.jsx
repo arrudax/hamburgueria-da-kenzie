@@ -1,6 +1,9 @@
-import { Content } from "./style";
-import { Header } from "../../components/Header";
 import { apiFood } from "../../Services/api";
+
+import { Content } from "./style";
+
+import { Header } from "../../components/Header";
+import { Showcase } from "../../components/Showcase";
 
 import { useState, useEffect } from "react";
 
@@ -15,14 +18,7 @@ export const Home = () => {
     <Content>
       <Header />
 
-      {productsList?.map(({ id, img, name, category, price }) => (
-        <div key={id}>
-          <img src={img} alt="name" />
-          <h2>{name}</h2>
-          <p>{category}</p>
-          <span>{price}</span>
-        </div>
-      ))}
+      <Showcase productsList={productsList} />
     </Content>
   );
 };
