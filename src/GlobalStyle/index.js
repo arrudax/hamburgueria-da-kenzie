@@ -79,7 +79,7 @@ export const GlobalStyle = createGlobalStyle`
 
     span {
         font-family: 'Inter', sans-serif;
-        font-weight: ${(props) => (props.semiBold ? "600" : "400")};
+        font-weight: 600;
         font-size: 14px;
     }
 

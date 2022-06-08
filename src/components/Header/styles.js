@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Conteiner = styled.section`
+export const Conteiner = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
