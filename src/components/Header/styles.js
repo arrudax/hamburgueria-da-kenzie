@@ -9,7 +9,7 @@ export const Conteiner = styled.section`
 export const Content = styled.header`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   height: 20vh;
@@ -30,14 +30,21 @@ export const Content = styled.header`
     border: 1px solid var(--Grey-100);
     border-radius: 8px;
 
+    padding: 0 0.6rem 0 1rem;
+
     &:hover {
       border: 1px solid var(--Grey-20);
     }
 
     input {
       width: 80%;
+
       background-color: transparent;
       border: none;
+
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
 
       &:focus {
         outline: none;
@@ -50,7 +57,7 @@ export const Content = styled.header`
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     .conteiner__search {

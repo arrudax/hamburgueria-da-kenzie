@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
         --Negative: #E60000;
         --Warning: #FFCD07;
-        --Sucess #168821;
-        --Information #155BCB;
+        --Sucess: #168821;
+        --Information: #155BCB;
     }
     
     * {
@@ -50,8 +50,6 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--Grey-20);
         font-weight: 400;
         font-size: 16px;
-
-        padding: 1.1rem;        
     }
 
 
