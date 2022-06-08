@@ -20,7 +20,7 @@ export const Home = () => {
           <img src={img} alt="name" />
           <h2>{name}</h2>
           <p>{category}</p>
-          <span>{price}</span>
+          
         </div>
       ))}
     </Content>
