@@ -5,8 +5,10 @@ export const Conteiner = styled.div`
  
 `;
 
-export const Content = styled.div`
+export const Content = styled.main`
     width: 100%;
     display: flex;
     justify-content: center;
+
+    overflow: hidden;
 `;
