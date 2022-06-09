@@ -1,4 +1,4 @@
-// import { ThemeButton } from "../ThemeButton/index.jsx";
+import { ThemeButton } from "../ThemeButton/index.jsx";
 import { Conteiner, Content } from "./style.js";
 
 export const Cart = () => {
@@ -9,8 +9,13 @@ export const Cart = () => {
           <div className="cart__style">
             <h3>Carrinho de compras</h3>
           </div>
+          
+          {/* .toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          } */}
 
-          {/* <div className="cart__content--active">
+          <div className="cart__content--active">
             <ul className="content__list"></ul>
 
             <div className="contentCart__purchase">
@@ -20,12 +25,12 @@ export const Cart = () => {
               </div>
               <ThemeButton className="purchase__btn">Remover todos</ThemeButton>
             </div>
-          </div> */}
+          </div>
 
-          <div className="cart__content--inactive">
+          {/* <div className="cart__content--inactive">
             <h3>Sua sacola está vazia</h3>
             <p>Adicione itens</p>
-          </div>
+          </div> */}
         </Content>
       </Conteiner>
     </>

@@ -23,8 +23,6 @@ export const Content = styled.li`
     justify-content: center;
     align-items: center;
 
-    img {
-    }
   }
 
   .card__content {
@@ -35,6 +33,10 @@ export const Content = styled.li`
 
     span {
       color: var(--Color-primary);
+    }
+
+    @media (min-width: 1024px) {
+
     }
   }
 `;
