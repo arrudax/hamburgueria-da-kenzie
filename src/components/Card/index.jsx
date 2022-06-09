@@ -1,4 +1,4 @@
-import { ThemeButton } from "../Button";
+import { ThemeButton } from "../ThemeButton";
 import { Content } from "./style";
 
 export const Card = ({ img, name, category, price }) => {

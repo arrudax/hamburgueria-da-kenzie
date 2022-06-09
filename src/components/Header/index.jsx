@@ -1,5 +1,5 @@
 import logo from "../../assets/logo/logo.svg";
-import { ThemeButton } from "../../components/Button";
+import { ThemeButton } from "../../components/ThemeButton";
 import { Conteiner, Content } from "./styles";
 
 export const Header = () => {
