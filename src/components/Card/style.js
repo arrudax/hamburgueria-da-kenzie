@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Content = styled.li`
-  width: 300px;
-  height: 346px;
+  max-width: 300px;
+  max-height: 346px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
