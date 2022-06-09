@@ -1,4 +1,5 @@
 import { Card } from "../Card";
+import { Cart } from "../Cart";
 import { Conteiner, Content } from "./style";
 
 export const Showcase = ({ productsList }) => {
@@ -17,6 +18,8 @@ export const Showcase = ({ productsList }) => {
           ))}
         </ul>
       </Content>
+      <Cart />
+
     </Conteiner>
   );
 };

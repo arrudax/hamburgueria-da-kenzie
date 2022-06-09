@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const Conteiner = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  
 `;
 
 export const Content = styled.section`
