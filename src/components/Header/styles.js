@@ -68,8 +68,14 @@ export const Content = styled.header`
   }
 
   @media (min-width: 1024px) {
-    justify-content: space-between;
+    justify-content: space-around;
 
     padding: 1.5rem;
   }
+
+  @media (min-width: 1024px) {
+  justify-content: space-evenly;
+  
+  }
+
 `;
