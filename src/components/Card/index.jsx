@@ -1,7 +1,7 @@
 import { ThemeButton } from "../ThemeButton";
 import { Content } from "./style";
 
-export const Card = ({ img, name, category, price }) => {
+export const Card = ({ id, img, name, category, price, handleClick }) => {
   return (
     <Content>
       <div className="card__img">
@@ -16,7 +16,8 @@ export const Card = ({ img, name, category, price }) => {
             currency: "BRL",
           })}
         </span>
-        <ThemeButton>Adicionar</ThemeButton>
+          
+        <ThemeButton onclick={() => handleClick({id})}>Adicionar</ThemeButton>
       </div>
     </Content>
   );

@@ -8,10 +8,18 @@ import { Showcase } from "../../components/Showcase";
 import { useState, useEffect } from "react";
 
 export const Home = () => {
-  const [productsList, setProductsList] = useState([]);
+  const [products, setProducts] = useState([]);
+  // const [filteredProducts, setFilteredProducts] = useState([]);
+  // const [currentSale, setCurrentSale] = useState([]);
+  // const [cartTotal, setCartTotal] = useState(0);
+
+  const handleClick = ({id}) => {
+
+    console.log(id);
+  };
 
   useEffect(() => {
-    apiFood.get("/products").then((response) => setProductsList(response.data));
+    apiFood.get("/products").then((response) => setProducts(response.data));
   }, []);
 
   return (
@@ -20,10 +28,9 @@ export const Home = () => {
         <Header />
 
         <Content>
-          <Showcase productsList={productsList} />
+          <Showcase products={products} handleClick={handleClick} />
         </Content>
       </Conteiner>
     </>
-
   );
 };

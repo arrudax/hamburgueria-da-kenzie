@@ -2,24 +2,25 @@ import { Card } from "../Card";
 import { Cart } from "../Cart";
 import { Conteiner, Content } from "./style";
 
-export const Showcase = ({ productsList }) => {
+export const Showcase = ({ products, handleClick }) => {
   return (
     <Conteiner>
       <Content>
         <ul>
-          {productsList?.map(({ id, img, name, category, price }) => (
+          {products?.map(({ id, img, name, category, price }) => (
             <Card
               key={id}
+              id={id}
               img={img}
               name={name}
               category={category}
               price={price}
+              handleClick={handleClick}
             />
           ))}
         </ul>
       </Content>
       <Cart />
-
     </Conteiner>
   );
 };
