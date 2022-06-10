@@ -6,14 +6,15 @@ export const Conteiner = styled.div`
 
   margin: 0px 25px 0 25px;
 
-  @media (min-width: 980px) {
-    width: 365px;
-    height: 465px;
+  @media (min-width: 1024px) {
+    max-width: 365px;
+    max-height: 465px;
   }
 `;
 
 export const Content = styled.aside`
   margin: 10px auto;
+  max-width: 610px;
   width: 100%;
 
   .cart__style {
@@ -101,18 +102,7 @@ export const Content = styled.aside`
     }
   }
 
+  /* dentro do cart */
   @media (min-width: 768px) {
-    width: 70%;
-
-    /* width: 365px;
-    height: 65px; */
-    .cart__style {
-      /* width: 98%; */
-    }
-
-    .cart__content--active {
-    }
-    .cart__content--inactive {
-    }
   }
 `;

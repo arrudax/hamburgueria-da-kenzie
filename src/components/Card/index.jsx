@@ -10,7 +10,12 @@ export const Card = ({ img, name, category, price }) => {
       <div className="card__content">
         <h3>{name}</h3>
         <p>{category}</p>
-        <span>{price}</span>
+        <span>
+          {price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </span>
         <ThemeButton>Adicionar</ThemeButton>
       </div>
     </Content>

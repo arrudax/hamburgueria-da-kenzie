@@ -18,6 +18,7 @@ export const Content = styled.header`
   background-color: var(--Grey-0);
 
   .conteiner__search {
+    max-width: 400px;
     width: 90%;
     height: 60px;
 
@@ -65,4 +66,16 @@ export const Content = styled.header`
       height: 60px;
     }
   }
+
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+  justify-content: space-evenly;
+  
+  }
+
 `;

@@ -5,7 +5,17 @@ export const Conteiner = styled.main`
   flex-direction: column;
   justify-content: center;
 
-  
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+    
+    section {
+      max-width: 700px;
+    }
+  }
+
 `;
 
 export const Content = styled.section`
@@ -21,11 +31,21 @@ export const Content = styled.section`
     align-items: center;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     ul {
+      width: 100%;
       overflow-x: hidden;
       flex-wrap: wrap;
       justify-content: center;
+      overflow: hidden;
+
+      li {
+        width: 29%;
+
+        .card__img {
+          width: 100%;
+        }
+      }
     }
   }
 `;
