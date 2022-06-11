@@ -2,7 +2,7 @@ import { Card } from "../Card";
 import { Cart } from "../Cart";
 import { Conteiner, Content } from "./style";
 
-export const Showcase = ({ products, handleClick }) => {
+export const Showcase = ({ products, handleClick, currentSale }) => {
   return (
     <Conteiner>
       <Content>
@@ -20,7 +20,7 @@ export const Showcase = ({ products, handleClick }) => {
           ))}
         </ul>
       </Content>
-      <Cart />
+      <Cart currentSale={currentSale} />
     </Conteiner>
   );
 };

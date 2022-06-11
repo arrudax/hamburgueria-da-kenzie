@@ -10,12 +10,13 @@ export const Conteiner = styled.main`
     justify-content: space-around;
     align-content: center;
     align-items: flex-start;
-    
+
+    height: 100vh;
+
     section {
       max-width: 700px;
     }
   }
-
 `;
 
 export const Content = styled.section`

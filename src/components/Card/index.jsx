@@ -16,8 +16,8 @@ export const Card = ({ id, img, name, category, price, handleClick }) => {
             currency: "BRL",
           })}
         </span>
-          
-        <ThemeButton onclick={() => handleClick({id})}>Adicionar</ThemeButton>
+
+        <ThemeButton id={id} handleClick={handleClick}>Adicionar</ThemeButton>
       </div>
     </Content>
   );
