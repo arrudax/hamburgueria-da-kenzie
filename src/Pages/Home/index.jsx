@@ -11,13 +11,18 @@ export const Home = () => {
   const [products, setProducts] = useState([]);
   // const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
-  // const [cartTotal, setCartTotal] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
+
+  useEffect(() => {
+    apiFood.get("/products").then((response) => setProducts(response.data));
+  }, []);
 
   const handleClick = (productId) => {
     if (currentSale.some((product) => product.id === productId)) {
       return console.log("item já add"); //err
     } else {
-      products.filter(({ id, name, img, category, price }) => { //Não sei onde colocar key e não aceitou ()
+      products.filter(({ id, name, img, category, price }) => {
+        //Não sei onde colocar key e não aceitou (), para o error da arrowFuc
         const item = {
           id,
           img,
@@ -34,22 +39,31 @@ export const Home = () => {
     }
   };
 
-  // const showProducts = () => {};
+  const removeItem = (productId) => {
+    const productRemove = currentSale.filter(
+      (product) => product.id !== productId
+    );
+    setCurrentSale(productRemove);
+  };
 
-  useEffect(() => {
-    apiFood.get("/products").then((response) => setProducts(response.data));
-  }, []);
+  const removeAllItems = () => {
+    const productRemove = currentSale.filter((product) => console.log(product));
+    setCurrentSale(productRemove);
+  };
 
   return (
     <>
       <Conteiner>
         <Header />
-
         <Content>
           <Showcase
             products={products}
             handleClick={handleClick}
             currentSale={currentSale}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
+            removeItem={removeItem}
+            removeAllItems={removeAllItems}
           />
         </Content>
       </Conteiner>

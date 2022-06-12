@@ -1,5 +1,7 @@
 import { Conteiner, Content } from "./style.js";
-export const CartProducts = ({ name, img, category }) => {
+export const CartProducts = ({ id ,name, img, category, removeItem }) => {
+
+  
   return (
     <Conteiner>
       <Content>
@@ -10,7 +12,7 @@ export const CartProducts = ({ name, img, category }) => {
           <h4>{name.charAt(10) ? name.substring(0, 9) + '...' : name}</h4>
           <p>{category}</p>
         </div>
-        <button className="cartProducts__remove">Remove</button>
+        <button onClick={() => removeItem(id)} className="cartProducts__remove">Remove</button>
       </Content>
     </Conteiner>
   );

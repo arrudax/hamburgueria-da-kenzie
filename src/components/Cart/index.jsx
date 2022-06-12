@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import { CartProducts } from "../CartProducts/index.jsx";
-import { ThemeButton } from "../ThemeButton/index.jsx";
+
 import { Conteiner, Content } from "./style.js";
 
-export const Cart = ({ currentSale }) => {
+export const Cart = ({
+  removeItem,
+  currentSale,
+  cartTotal,
+  setCartTotal,
+  removeAllItems,
+}) => {
+  useEffect(() => {
+    const value = currentSale?.reduce(
+      (acc, currentValue) => acc + currentValue.price,
+      0
+    );
+    setCartTotal(value);
+  }, [setCartTotal, currentSale]);
   return (
     <>
       <Conteiner>
@@ -16,9 +30,11 @@ export const Cart = ({ currentSale }) => {
                 {currentSale?.map(({ id, name, img, category }) => (
                   <CartProducts
                     key={id}
+                    id={id}
                     name={name}
                     img={img}
                     category={category}
+                    removeItem={removeItem}
                   />
                 ))}
               </ul>
@@ -26,11 +42,19 @@ export const Cart = ({ currentSale }) => {
               <div className="contentCart__purchase">
                 <div className="purchase__total">
                   <span>Total</span>
-                  <span>R$ 40,00</span>
+                  <span>
+                    {cartTotal.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </span>
                 </div>
-                <ThemeButton className="purchase__btn">
+                <button
+                  onClick={() => removeAllItems()}
+                  className="purchase__btn"
+                >
                   Remover todos
-                </ThemeButton>
+                </button>
               </div>
             </div>
           ) : (
@@ -39,14 +63,6 @@ export const Cart = ({ currentSale }) => {
               <p>Adicione itens</p>
             </div>
           )}
-          {/* .toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-          } */}
-          {/*
-           */}
-
-          {/*  */}
         </Content>
       </Conteiner>
     </>

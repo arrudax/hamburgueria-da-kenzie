@@ -48,7 +48,6 @@ export const Content = styled.aside`
     width: 100%;
 
     background-color: var(--Grey-0);
-    
 
     border-radius: 0px 0px 5px 5px;
 
@@ -76,6 +75,8 @@ export const Content = styled.aside`
 
       button {
         width: 100%;
+        height: 40px;
+
         background-color: var(--Grey-20);
 
         color: var(--Grey-50);

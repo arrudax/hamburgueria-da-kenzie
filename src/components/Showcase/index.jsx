@@ -2,7 +2,16 @@ import { Card } from "../Card";
 import { Cart } from "../Cart";
 import { Conteiner, Content } from "./style";
 
-export const Showcase = ({ products, handleClick, currentSale }) => {
+export const Showcase = ({
+  products,
+  handleClick,
+  currentSale,
+  cartTotal,
+  setCartTotal,
+  removeItem,
+  removeAllItems,
+}) => {
+
   return (
     <Conteiner>
       <Content>
@@ -20,7 +29,13 @@ export const Showcase = ({ products, handleClick, currentSale }) => {
           ))}
         </ul>
       </Content>
-      <Cart currentSale={currentSale} />
+      <Cart
+        currentSale={currentSale}
+        cartTotal={cartTotal}
+        setCartTotal={setCartTotal}
+        removeItem={removeItem}
+        removeAllItems={removeAllItems}
+      />
     </Conteiner>
   );
 };
