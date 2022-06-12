@@ -10,8 +10,8 @@ export const Showcase = ({
   setCartTotal,
   removeItem,
   removeAllItems,
+  filteredProducts,
 }) => {
-
   return (
     <Conteiner>
       <Content>

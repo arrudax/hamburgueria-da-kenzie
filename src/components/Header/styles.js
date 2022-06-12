@@ -33,6 +33,19 @@ export const Content = styled.header`
 
     padding: 0 0.6rem 0 1rem;
 
+    button {
+      background-color: var(--Color-primary);
+
+      width: 107px;
+
+      height: 40px;
+
+      color: white;
+      &:hover {
+        background-color: var(--Color-primary-50);
+      }
+    }
+
     &:hover {
       border: 1px solid var(--Grey-20);
     }
@@ -74,8 +87,6 @@ export const Content = styled.header`
   }
 
   @media (min-width: 1024px) {
-  justify-content: space-evenly;
-  
+    justify-content: space-evenly;
   }
-
 `;
