@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Content = styled.li`
-  width: 300px;
-  height: 346px;
+  max-width: 300px;
+  max-height: 346px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,8 +23,6 @@ export const Content = styled.li`
     justify-content: center;
     align-items: center;
 
-    img {
-    }
   }
 
   .card__content {
@@ -35,6 +33,10 @@ export const Content = styled.li`
 
     span {
       color: var(--Color-primary);
+    }
+
+    @media (min-width: 1024px) {
+
     }
   }
 `;

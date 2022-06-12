@@ -18,6 +18,7 @@ export const Content = styled.header`
   background-color: var(--Grey-0);
 
   .conteiner__search {
+    max-width: 400px;
     width: 90%;
     height: 60px;
 
@@ -31,6 +32,19 @@ export const Content = styled.header`
     border-radius: 8px;
 
     padding: 0 0.6rem 0 1rem;
+
+    button {
+      background-color: var(--Color-primary);
+
+      width: 107px;
+
+      height: 40px;
+
+      color: white;
+      &:hover {
+        background-color: var(--Color-primary-50);
+      }
+    }
 
     &:hover {
       border: 1px solid var(--Grey-20);
@@ -64,5 +78,15 @@ export const Content = styled.header`
       width: 365px;
       height: 60px;
     }
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: space-evenly;
   }
 `;

@@ -1,7 +1,7 @@
-import { ThemeButton } from "../Button";
+import { ThemeButton } from "../ThemeButton";
 import { Content } from "./style";
 
-export const Card = ({ img, name, category, price }) => {
+export const Card = ({ id, img, name, category, price, handleClick }) => {
   return (
     <Content>
       <div className="card__img">
@@ -10,8 +10,14 @@ export const Card = ({ img, name, category, price }) => {
       <div className="card__content">
         <h3>{name}</h3>
         <p>{category}</p>
-        <span>{price}</span>
-        <ThemeButton>Adicionar</ThemeButton>
+        <span>
+          {price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </span>
+
+        <ThemeButton id={id} handleClick={handleClick}>Adicionar</ThemeButton>
       </div>
     </Content>
   );

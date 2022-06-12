@@ -1,8 +1,18 @@
+import { useState } from "react";
 import logo from "../../assets/logo/logo.svg";
-import { ThemeButton } from "../../components/Button";
 import { Conteiner, Content } from "./styles";
 
-export const Header = () => {
+export const Header = ({ setFilteredProducts, products }) => {
+  const [valueInput, setValueInput] = useState("");
+
+  const searchProducts = () => {
+    const filterProduct = products?.filter(
+      ({ name }) => name.toLowerCase() === valueInput.toLowerCase()
+    );
+
+    setFilteredProducts(filterProduct);
+  };
+
   return (
     <>
       <Conteiner>
@@ -10,9 +20,14 @@ export const Header = () => {
           <img src={logo} alt="logo do restaurante" />
 
           <div className="conteiner__search">
-            <input type="text" placeholder="Digitar Pesquisa" />
+            <input
+              type="text"
+              value={valueInput}
+              placeholder="Digitar Pesquisa"
+              onChange={(event) => setValueInput(event.target.value)}
+            />
 
-            <ThemeButton>Pesquisar</ThemeButton>
+            <button onClick={() => searchProducts()}>Pesquisar</button>
           </div>
         </Content>
       </Conteiner>
