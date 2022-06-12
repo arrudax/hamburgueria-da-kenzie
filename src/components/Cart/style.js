@@ -16,6 +16,7 @@ export const Content = styled.aside`
   margin: 10px auto;
   max-width: 610px;
   width: 100%;
+  /* height: 100vh; */
 
   .cart__style {
     background-color: var(--Color-primary);
@@ -36,7 +37,7 @@ export const Content = styled.aside`
   }
 
   .content__list {
-    width: 80%;
+    width: 100%;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -45,7 +46,6 @@ export const Content = styled.aside`
 
   .cart__content--active {
     width: 100%;
-    height: 470px;
 
     background-color: var(--Grey-0);
 
@@ -58,7 +58,7 @@ export const Content = styled.aside`
     .contentCart__purchase {
       width: 80%;
 
-      gap: 25px;
+      /* gap: 25px; */
 
       padding-bottom: 20px;
 
@@ -70,11 +70,13 @@ export const Content = styled.aside`
         justify-content: space-between;
 
         border-top: 2px solid var(--Grey-20);
-        padding-top: 15px;
+        padding: 15px;
       }
 
       button {
         width: 100%;
+        height: 40px;
+
         background-color: var(--Grey-20);
 
         color: var(--Grey-50);
